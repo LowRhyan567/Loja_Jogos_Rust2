@@ -36,7 +36,7 @@ fn main() {
         std::env::set_var("RUST_BACKTRACE", "1");
     }
 
-    let url = "mysql://root:unifecaf@localhost:3306/Loja_jogos"; // Ajuste as credenciais
+    let url = "mysql://root:SENHA@localhost:3306/NOME"; // Credenciais
     let pool = Pool::new(url).unwrap();
     let mut conn = pool.get_conn().unwrap();
 
