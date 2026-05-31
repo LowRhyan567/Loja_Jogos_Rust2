@@ -1,0 +1,17 @@
+use Loja_Jogos;
+
+CREATE TABLE usuarios (
+    ID INT UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
+    login VARCHAR(30) NOT NULL,
+    senha VARCHAR(255) NOT NULL, 
+    admin BOOLEAN NOT NULL DEFAULT FALSE,
+    dinheiro DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    PRIMARY KEY (ID)
+) ENGINE = MyISAM;
+
+CREATE TABLE biblioteca (
+    usuario_id INT UNSIGNED ZEROFILL NOT NULL,
+    produto_id INT NOT NULL,
+    data_adquirido TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (usuario_id, produto_id)
+) ENGINE = MyISAM;
