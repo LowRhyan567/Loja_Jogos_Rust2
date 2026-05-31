@@ -61,7 +61,7 @@ fn main() {
 }
 
 fn conectar_banco() -> PooledConn {
-    let url = "mysql://root:unifecaf@localhost:3306/Loja_Jogos";
+    let url = "mysql://root:senha@localhost:3306/Loja_Jogos";
     let pool = Pool::new(url).expect("Falha ao criar pool");
     pool.get_conn().expect("Falha ao obter conexão")
 }
